@@ -33,9 +33,7 @@ export default function ContactMe() {
                     <span className="focus"></span>
                 </div>
 
-                <div className="btn-box btns" >
-                    <button type="submit" className="btn">Submit</button>
-                </div>
+                <button type="submit" className="btn btns">Submit</button>
 
             </form>
         </section>

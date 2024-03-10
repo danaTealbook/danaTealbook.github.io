@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    background: var(--bg-color); /*TODO remove */
+    background: var(--bg-color);
     color: var(--text-color); 
 }
 
@@ -95,24 +95,28 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    border: .2rem solid red;
 }
 
 .home {
-    background: url('/images/home.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background: url('/images/home.jpg') no-repeat; */
+    /* background-size: cover;
+    background-position: center; */
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    justify-content: space-between;
+    padding: 5% 10%;
 }
 
 .home-content {
-    max-width: 60rem;
+    /* max-width: 60rem; */
+    /* width: 100%; */
     z-index: 99;
+    /* background: red; */
 }
 
 .home-content h1 {
-    position: relative;
+    /* position: relative; */
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
@@ -130,7 +134,7 @@ section {
 } */
 
 .home-content h3 {
-    position: relative;
+    /* position: relative; */
     font-size: 3.2rem;
     font-weight: 700;
     color: var(--highlight-color);
@@ -148,7 +152,7 @@ section {
 } */
 
 .home-content p {
-    position: relative;
+    /* position: relative; */
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
@@ -164,35 +168,14 @@ section {
     animation-delay: 1.2s;
 } */
 
-.btn-box {
-    position: relative;
-    display: flex;
-    justify-content: left;
-    width: 34.5rem;
-    height: 5rem;
-    /* background: yellowgreen; */
-}
-/* .btn-box::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.5s;
-    z-index: 2;
-} */
-
-.btn-box a,
-.btn-box button {
-    position: relative;
+.btn {
+    /* position: relative; */
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 17rem;
-    height: 100%;
+    /* height: 100%; */
+    height: 5rem;
     border: .2rem solid var(--highlight-color);
     border-radius: .8rem;
     font-size: 1.9rem;
@@ -204,20 +187,20 @@ section {
     transition: .3s;
 }
 
-.btn-box a:hover,
-.btn-box button:hover {
+.btn:hover {
     background: var(--highlight-color);
     color: var(--bg-color);
     box-shadow: 0 0 2rem var(--highlight-color);
 }
 
 .home-sci {
-    position: absolute;
+    /* position: absolute; */
     bottom: 4rem;
     width: 100px;
     /* background: red; */
     display: flex;
     justify-content: space-between;
+    margin-top: 4rem;
 }
 /* .home-sci::before{
     content: '';
@@ -269,45 +252,35 @@ section {
     width: 100%;
 }
 
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background:  transparent;
-    /* border: 2px solid red; */
-    transition: 3s;
-    animation: manipActiveHover .1s forwards;
-    animation-delay: 4s;
-    pointer-events: none;
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: yellowgreen; */
+    /* width: 30%; */
+    padding-top: 4rem;
 }
-.home-imgHover:hover {
-    background: var(--bg-color);
-    opacity: .8;
+
+.home-img  img{
+    width: 80%;
+    animation: bounce 3s linear infinite;
 }
-/* .home-imgHover::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 2s;
-    z-index: 100;
-} */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2rem);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(-2rem);
+    }
+}
 
 @keyframes showRight {
     100% {
         width: 0;
-    }
-}
-
-@keyframes manipActiveHover {
-    100% {
-        pointer-events: auto;
     }
 }
 
@@ -377,12 +350,6 @@ section {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-}
-
-.btn-box.btns {
-    display: inline-block;
-    width: 15rem;
-    /* background: greenyellow; */
 }
 
 .skills {
@@ -481,7 +448,7 @@ section {
     resize: none;
 }
 
-.contact form .btn-box.btns .btn {
+.contact form .btns {
     cursor: pointer;
 }
 
@@ -589,10 +556,14 @@ section {
         transition-delay: .25s;
     } */
 
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20%;
+    }
+
+    .home-img {
+        width: 60%;
     }
 }
 
@@ -610,10 +581,10 @@ section {
         width: 140px;
     }
 
-    /* .home-sci a {
-        width: 38px;
-        height: 38px;
-    } */
+    .home-sci a {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 @media (max-width: 462px) {
@@ -649,10 +620,6 @@ section {
 
     .home-content h1 {
         font-size: 5rem;
-    }
-
-    .btn-box {
-        justify-content: center;
     }
 }
 
