@@ -4,10 +4,12 @@
   "description": "personal portfolio website",
   "main": "src/index.js",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "react": "18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "18.2.0",
+    "react-on-screen": "^2.1.1",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

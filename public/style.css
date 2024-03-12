@@ -85,6 +85,18 @@ body {
     color: var(--highlight-color);
 }
 
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: showRight .6s ease forwards;
+    animation-delay: .4s;
+}
+
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
@@ -261,12 +273,12 @@ section {
     padding-top: 4rem;
 }
 
-.home-img  img{
+.home-img img {
     width: 80%;
-    animation: bounce 3s linear infinite;
+    animation: bounceSlightly 3s linear infinite;
 }
 
-@keyframes bounce {
+@keyframes bounceSlightly {
     0% {
         transform: translateY(-2rem);
     }

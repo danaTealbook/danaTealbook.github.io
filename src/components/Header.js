@@ -41,7 +41,7 @@ export default function Header() {
             setMenuIsOpen(false)
         }
     }
-console.log("header" + (isHeaderSticky ? " sticky" : ""))
+
     return (
         <header className={"header" + (isHeaderSticky ? " sticky" : "")}>
             <a href="#" className="logo">Dana<span className="animate"></span></a>

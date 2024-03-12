@@ -5,7 +5,7 @@ import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import MainPage from "./components/MainPage";
 import Header from "./components/Header";
-
+import 'animate.css';
 
 export default function App() {
     return (
