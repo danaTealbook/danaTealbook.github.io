@@ -1,9 +1,12 @@
 import React from "react"
+import SlideEffect from "./SlideEffect"
 
 export default function ContactMe() {
     return (
         <section className="contact" id="contact">
-            <h2 className="heading">Contact Me</h2>
+            <SlideEffect inAnimation="animate__animated animate__pulse">
+                <h2 className="heading">Contact Me</h2>
+            </SlideEffect>
 
             <form action="#">
                 <div className="input-box">
