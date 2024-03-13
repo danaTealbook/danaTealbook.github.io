@@ -8,7 +8,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-iconTop">
-                <a href="#"><i class='bx bxs-up-arrow'></i></a>
+                <a href="#"><i className='bx bxs-up-arrow'></i></a>
             </div>
         </div>
     )
