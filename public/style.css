@@ -381,27 +381,46 @@ section {
 
 .skills {
   min-height: auto;
-  padding-bottom: 6rem;
-}
-
-.skills-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  background: yellowgreen;
-}
-
-.skills-column {
-  background: green;
-  flex: 1 1 40rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+  padding-left: 10%;
 }
 
 .skills-list-box {
   margin-top: 1.5rem;
 }
 
-.skills-column li {
+.skills-list-box li {
   font-size: 2rem;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.skills-icons div {
+  width: 4vw;
+  height: 4vw;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid var(--highlight-color);
+  border-radius: 50%;
+  font-size: 3vw;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.skills-icons div:hover {
+  box-shadow: 0 0 2rem var(--highlight-color);
 }
 
 .contact {
@@ -536,8 +555,18 @@ section {
     padding: 0 4%;
   }
 
+  .skills {
+    padding-left: 4%;
+  }
+
   .footer {
     padding: 2rem 4%;
+  }
+
+  .skills-icons div {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
   }
 }
 

@@ -1,53 +1,63 @@
 import React from "react";
+import TechSkillIcons from "./TechSkillIcons";
+import SlideEffect from "./SlideEffect";
+import { Grid } from "@mui/material";
 
-const techSkills = [
-  "Javascript",
-  "Typescript",
-  "React",
-  "Node",
-  "JQuery",
-  "HTML5",
-  "CSS3",
-  "Java",
-  "C",
-  "C++",
-  "SQL",
-  "Shell",
-  "Python",
-  "MySQL",
-  "MongoDB",
-  "Git",
-  "Jenkins",
-  "Jira",
-  "SVN",
-  "JSON",
-  "RESTful APIs",
-  "Photoshop",
-];
+const techSkills = {
+  Web: [
+    "Javascript (ES6+)",
+    "Typescript",
+    "React",
+    "CSS3",
+    "HTML5",
+    "JQuery",
+    "Node JS",
+  ],
+  Languages: [
+    "Javascript",
+    "Typescript",
+    "Java",
+    "C",
+    "C++",
+    "SQL",
+    "Shell",
+    "Python",
+  ],
+  "Tools & Environments": [
+    "Visual Studio Code",
+    "IntelliJ IDEA",
+    "Android Studio",
+    "Eclipse IDE",
+    "SoapUI",
+  ],
+  Databases: ["MySQL", "MongoDB"],
+  "DevOps & Collaboration": ["Git", "Jenkins", "SVN", "Jira"],
+  Others: ["JSON", "RESTful APIs", "Adobe Photoshop"],
+};
 
 export default function Skills() {
   return (
     <section className="skills" id="skills">
-      <h2 className="heading">My Skills</h2>
+      <SlideEffect inAnimation="animate__animated animate__pulse">
+        <h2 className="heading">My Skills</h2>
+      </SlideEffect>
 
-      <div className="skills-row">
-        <div className="skills-column">
-          <h3 className="subheading">Coding Skills</h3>
-          <div className="skills-list-box">
-            {techSkills.map((techSkill, index) => (
-              <li key={index}>{techSkill}</li>
-            ))}
-          </div>
-        </div>
+      <SlideEffect inAnimation="animate__animated animate__pulse">
+        <TechSkillIcons />
+      </SlideEffect>
 
-        <div className="skills-column">
-          <h3 className="subheading">Professional Skills</h3>
-          <li>Javascript</li>
-          <li>TypeScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </div>
-      </div>
+      <Grid container spacing={2}>
+        {Object.entries(techSkills).map(([category, skills]) => (
+          <Grid item xs={12} sm={6} xl={3}>
+            <h3 className="subheading">{category}</h3>
+            <div className="skills-list-box">
+              {skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </div>
+          </Grid>
+        ))}
+      </Grid>
     </section>
   );
 }

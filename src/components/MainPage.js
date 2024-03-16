@@ -31,8 +31,7 @@ export default function MainPage() {
           >
             <p>
               Experienced Frontend Developer specializing in web applications.
-              Skilled in the latest technologies such as React, TypeScript, and
-              Node.js. My goal is to make websites easy to use and enjoyable for
+              My goal is to make websites easy to use and enjoyable for
               everyone.
             </p>
           </SlideEffect>
