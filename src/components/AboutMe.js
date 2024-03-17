@@ -15,7 +15,10 @@ export default function AboutMe() {
         </div>
       </SlideEffect>
 
-      <SlideEffect inAnimation="animate__animated animate__pulse">
+      <SlideEffect
+        inAnimation="animate__animated animate__fadeIn"
+        outAnimation="animate__animated animate__fadeOut"
+      >
         <div className="about-content">
           <h3 className="subheading">Frontend Developer</h3>
           <p>
@@ -28,11 +31,10 @@ export default function AboutMe() {
             user-centric approach. Let's connect and discuss how my diverse
             skill set can contribute to your team's success.
           </p>
-          <a href="#" className="btn">
-            Read More
-          </a>
         </div>
       </SlideEffect>
+
+      <h3 className="subheading">Work Experience</h3>
     </section>
   );
 }

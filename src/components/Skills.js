@@ -49,12 +49,17 @@ export default function Skills() {
       <Grid container spacing={2}>
         {Object.entries(techSkills).map(([category, skills]) => (
           <Grid item xs={12} sm={6} xl={3}>
-            <h3 className="subheading">{category}</h3>
-            <div className="skills-list-box">
-              {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </div>
+            <SlideEffect
+              inAnimation="animate__animated animate__fadeInLeft"
+              outAnimation="animate__animated animate__fadeOutLeft"
+            >
+              <h3 className="subheading">{category}</h3>
+              <div className="skills-list-box">
+                {skills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </div>
+            </SlideEffect>
           </Grid>
         ))}
       </Grid>

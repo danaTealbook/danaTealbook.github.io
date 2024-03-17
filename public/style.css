@@ -67,6 +67,13 @@ body {
   animation-delay: 0.2s;
 }
 
+.logo img {
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .navbar {
     position: relative;
 } */
@@ -144,60 +151,23 @@ section {
 }
 
 .home-content h1 {
-  /* position: relative; */
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.3;
 }
-/* .home-content h1::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 0.6s;
-} */
 
 .home-content h3 {
-  /* position: relative; */
   font-size: 3.2rem;
   font-weight: 700;
   color: var(--highlight-color);
 }
-/* .home-content h3::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 0.9s;
-} */
 
 .home-content p {
-  /* position: relative; */
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
-/* .home-content p::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.2s;
-} */
 
 .btn {
-  /* position: relative; */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -222,7 +192,6 @@ section {
 }
 
 .home-sci {
-  /* position: absolute; */
   bottom: 4rem;
   width: 100px;
   /* background: red; */
@@ -230,18 +199,6 @@ section {
   justify-content: space-between;
   margin-top: 4rem;
 }
-/* .home-sci::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.8s;
-    z-index: 2;
-} */
 
 .home-sci a {
   position: relative;
@@ -600,16 +557,7 @@ section {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
-
-    /* transform: translateX(-20rem);
-        transition:  .25s ease;
-        transition-delay: 0s; */
   }
-
-  /* .navbar.active a{
-        transform: translateX(0);
-        transition-delay: .25s;
-    } */
 
   .home {
     flex-direction: column;

@@ -45,7 +45,8 @@ export default function Header() {
   return (
     <header className={"header" + (isHeaderSticky ? " sticky" : "")}>
       <a href="#" className="logo">
-        Dana<span className="animate"></span>
+        <img src="images/logo.jpg"></img>
+        <span className="animate"></span>
       </a>
 
       <div
