@@ -16,7 +16,8 @@
     "react-bootstrap": "^2.10.1",
     "react-dom": "18.2.0",
     "react-on-screen": "^2.1.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-vertical-timeline-component": "^3.6.0"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",

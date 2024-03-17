@@ -1,5 +1,6 @@
 import React from "react";
 import SlideEffect from "./SlideEffect";
+import WorkExperience from "./WorkExperience";
 
 export default function AboutMe() {
   return (
@@ -34,7 +35,8 @@ export default function AboutMe() {
         </div>
       </SlideEffect>
 
-      <h3 className="subheading">Work Experience</h3>
+      <h3 className="subheading">Experience and Education</h3>
+      <WorkExperience />
     </section>
   );
 }
