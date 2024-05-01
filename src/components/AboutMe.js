@@ -35,7 +35,7 @@ export default function AboutMe() {
         </div>
       </SlideEffect>
 
-      <h3 className="subheading">Experience and Education</h3>
+      <h3 className="subheading marginTop">Experience and Education</h3>
       <WorkExperience />
     </section>
   );
