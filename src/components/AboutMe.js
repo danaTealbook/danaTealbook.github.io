@@ -9,19 +9,20 @@ export default function AboutMe() {
         <h2 className="heading">About Me</h2>
       </SlideEffect>
 
-      <SlideEffect inAnimation="animate__animated animate__pulse">
+      <div className="about-image-and-text">
+        {/* <SlideEffect inAnimation="animate__animated animate__pulse"> */}
         <div className="about-img">
           <img src="images/about.png" alt="about-me" />
-          <span className="circle-spin"></span>
         </div>
-      </SlideEffect>
+        {/* </SlideEffect> */}
 
-      <SlideEffect
-        inAnimation="animate__animated animate__fadeIn"
-        outAnimation="animate__animated animate__fadeOut"
-      >
+        {/* <SlideEffect
+          inAnimation="animate__animated animate__fadeIn"
+          outAnimation="animate__animated animate__fadeOut"
+        > */}
         <div className="about-content">
-          <h3 className="subheading">Frontend Developer</h3>
+          {/* <h3 className="subheading">Frontend Developer</h3> */}
+          {/* <div className="content"> */}
           <p>
             Experienced Frontend Developer specializing in the design and
             implementation of real-time, distributed web applications. Skilled
@@ -32,9 +33,12 @@ export default function AboutMe() {
             user-centric approach. Let's connect and discuss how my diverse
             skill set can contribute to your team's success.
           </p>
+          {/* </div> */}
         </div>
-      </SlideEffect>
+        {/* </SlideEffect> */}
+      </div>
 
+      <hr />
       <h3 className="subheading marginTop">Experience and Education</h3>
       <WorkExperience />
     </section>

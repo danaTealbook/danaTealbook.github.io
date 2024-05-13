@@ -1,9 +1,12 @@
 import React from "react";
 import SlideEffect from "./SlideEffect";
+import ParticlesBackground from "./ParticlesBackground";
 
-export default function ContactMe() {
+export default function ContactMe({ showParticles }) {
   return (
     <section className="contact" id="contact">
+      {showParticles && <ParticlesBackground />}
+
       <SlideEffect inAnimation="animate__animated animate__pulse">
         <h2 className="heading">Contact Me</h2>
       </SlideEffect>

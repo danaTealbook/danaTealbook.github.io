@@ -73,7 +73,7 @@ export default function MainPage() {
         </div>
 
         <div className="home-img">
-          <img src="images/about.png" alt="home-image" />
+          <img src="images/mainPhoto.png" alt="home-image" />
         </div>
       </section>
     </div>
