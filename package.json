@@ -10,6 +10,8 @@
     "@mui/material": "^5.15.13",
     "@react-three/drei": "^9.102.3",
     "@react-three/fiber": "^8.15.19",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.3.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "maath": "^0.10.7",
