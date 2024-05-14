@@ -4,9 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* text-decoration: none;
-    border: none;
-    outline: none; */
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
@@ -74,10 +71,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-/* .navbar {
-    position: relative;
-} */
 
 .navbar a {
   position: relative;

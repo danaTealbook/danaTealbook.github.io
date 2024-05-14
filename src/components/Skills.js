@@ -48,7 +48,7 @@ export default function Skills() {
 
       <Grid container spacing={2}>
         {Object.entries(techSkills).map(([category, skills]) => (
-          <Grid item xs={12} sm={6} xl={3}>
+          <Grid item xs={12} sm={6} xl={3} key={category}>
             <SlideEffect
               inAnimation="animate__animated animate__fadeInLeft"
               outAnimation="animate__animated animate__fadeOutLeft"

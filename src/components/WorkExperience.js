@@ -63,8 +63,9 @@ const experienceList = [
 export default function WorkExperience() {
   return (
     <VerticalTimeline animate lineColor="#2cbaf5">
-      {experienceList.map((experience) => (
+      {experienceList.map((experience, index) => (
         <VerticalTimelineElement
+          key={index}
           className="experience"
           contentStyle={{
             background: "transparent",
