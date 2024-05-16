@@ -19,21 +19,10 @@ const ParticlesBackground = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  const particlesLoaded = () => {};
 
   const options = useMemo(
     () => ({
-      // background: {
-      //   color: {
-      //     value: "transparent",
-      //   },
-      // },
-      fullScreen: {
-        enable: true,
-        zIndex: -100,
-      },
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -43,8 +32,7 @@ const ParticlesBackground = () => {
           },
           onHover: {
             enable: true,
-            // mode: "repulse",
-            mode: "attract",
+            mode: "repulse",
             parallax: {
               enable: false,
               force: 2,
@@ -60,62 +48,14 @@ const ParticlesBackground = () => {
             distance: 200,
             duration: 0.4,
           },
-          trail: {
-            delay: 0.005,
-            pauseOnStop: true,
-            quantity: 5,
-            particles: {
-              color: {
-                value: "#ff0000",
-                animation: {
-                  enable: true,
-                  speed: 400,
-                  sync: true,
-                },
-              },
-              collisions: {
-                enable: false,
-              },
-              links: {
-                enable: false,
-              },
-              move: {
-                outModes: {
-                  default: "destroy",
-                },
-                speed: 2,
-              },
-              size: {
-                value: {
-                  min: 1,
-                  max: 5,
-                },
-                animation: {
-                  enable: true,
-                  speed: 5,
-                  sync: true,
-                  startValue: "min",
-                  destroy: "max",
-                },
-              },
-            },
-          },
-          attract: {
-            distance: 200,
-            duration: 0.4,
-            easing: "ease-out-quad",
-            factor: 1,
-            maxSpeed: 50,
-            speed: 1,
-          },
         },
       },
       particles: {
         color: {
-          value: "#2cbaf5",
+          value: "#ffffff",
         },
         links: {
-          color: "#2cbaf5",
+          color: "#ffffff",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -135,7 +75,7 @@ const ParticlesBackground = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 150,
         },
         opacity: {
           value: 0.5,
@@ -148,7 +88,7 @@ const ParticlesBackground = () => {
           // },
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 2, max: 5 },
         },
       },
       detectRetina: true,
@@ -159,6 +99,7 @@ const ParticlesBackground = () => {
   if (init) {
     return (
       <Particles
+        className="particles"
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}

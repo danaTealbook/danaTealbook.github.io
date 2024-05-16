@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-export default function Header({ activeTab, setActiveTab }) {
+export default function Header() {
+  const [activeTab, setActiveTab] = useState("home");
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [isHeaderSticky, setHeaderSticky] = useState(false);
 

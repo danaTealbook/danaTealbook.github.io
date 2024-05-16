@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SlideEffect from "./SlideEffect";
 import ParticlesBackground from "./ParticlesBackground";
 
-export default function ContactMe({ showParticles }) {
+export default function ContactMe() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -48,82 +48,84 @@ export default function ContactMe({ showParticles }) {
   };
 
   return (
-    <section className="contact" id="contact">
-      {showParticles && <ParticlesBackground />}
+    <div className="main-page">
+      <ParticlesBackground />
 
-      <SlideEffect inAnimation="animate__animated animate__pulse">
-        <h2 className="heading">Contact Me</h2>
-      </SlideEffect>
+      <section className="contact" id="contact">
+        <SlideEffect inAnimation="animate__animated animate__pulse">
+          <h2 className="heading">Contact Me</h2>
+        </SlideEffect>
 
-      <form onSubmit={handleSubmit}>
-        <div className="input-box">
-          <div className="input-field">
-            <input
-              type="text"
-              placeholder="Full Name"
-              name="fullName"
-              value={fullName}
+        <form onSubmit={handleSubmit}>
+          <div className="input-box">
+            <div className="input-field">
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="fullName"
+                value={fullName}
+                onChange={handleChange}
+                required
+              ></input>
+              <span className="focus"></span>
+            </div>
+            <div className="input-field">
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                required
+              ></input>
+              <span className="focus"></span>
+            </div>
+          </div>
+
+          <div className="input-box">
+            <div className="input-field">
+              <input
+                type="number"
+                placeholder="Phone Number"
+                name="phone"
+                value={phone}
+                onChange={handleChange}
+                required
+              ></input>
+              <span className="focus"></span>
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                placeholder="Email Subject"
+                name="subject"
+                value={subject}
+                onChange={handleChange}
+                required
+              ></input>
+              <span className="focus"></span>
+            </div>
+          </div>
+
+          <div className="textarea-field">
+            <textarea
+              id=""
+              cols={30}
+              rows={10}
+              placeholder="Your Message"
+              name="message"
+              value={message}
               onChange={handleChange}
               required
-            ></input>
+            ></textarea>
             <span className="focus"></span>
           </div>
-          <div className="input-field">
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              required
-            ></input>
-            <span className="focus"></span>
-          </div>
-        </div>
 
-        <div className="input-box">
-          <div className="input-field">
-            <input
-              type="number"
-              placeholder="Phone Number"
-              name="phone"
-              value={phone}
-              onChange={handleChange}
-              required
-            ></input>
-            <span className="focus"></span>
-          </div>
-          <div className="input-field">
-            <input
-              type="text"
-              placeholder="Email Subject"
-              name="subject"
-              value={subject}
-              onChange={handleChange}
-              required
-            ></input>
-            <span className="focus"></span>
-          </div>
-        </div>
-
-        <div className="textarea-field">
-          <textarea
-            id=""
-            cols={30}
-            rows={10}
-            placeholder="Your Message"
-            name="message"
-            value={message}
-            onChange={handleChange}
-            required
-          ></textarea>
-          <span className="focus"></span>
-        </div>
-
-        <button type="submit" className="btn btns">
-          Submit
-        </button>
-      </form>
-    </section>
+          <button type="submit" className="btn btns">
+            Submit
+          </button>
+        </form>
+      </section>
+    </div>
   );
 }
