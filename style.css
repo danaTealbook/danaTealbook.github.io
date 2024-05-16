@@ -427,7 +427,7 @@ hr {
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: transparent;
+  background: var(--secondary-bg-color);
   border-radius: 0.6rem;
   border: 0.2rem solid var(--highlight-color);
 }
@@ -475,8 +475,13 @@ hr {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 9%;
-  background: var(--highlight-color);
+  padding: 3rem 9% 2rem 9%;
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-bg-color),
+    var(--highlight-color),
+    var(--highlight-color)
+  );
 }
 
 .footer-text {
