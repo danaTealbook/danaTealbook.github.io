@@ -2,19 +2,25 @@ import React, { useState } from "react";
 import SlideEffect from "./SlideEffect";
 import ParticlesBackground from "./ParticlesBackground";
 
+const initialFormData = {
+  fullName: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+};
+
 export default function ContactMe() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
 
   const { fullName, email, phone, subject, message } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const reset = () => {
+    setFormData(initialFormData);
   };
 
   const handleSubmit = (e) => {
@@ -38,12 +44,12 @@ export default function ContactMe() {
           text: "Message sent successfully",
           icon: "success",
         });
+        reset();
       } else {
         alert("Oops, something went wrong. Please, try again later.");
       }
     });
 
-    // reset()
     // return false
   };
 
