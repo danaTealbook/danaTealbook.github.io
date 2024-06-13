@@ -400,12 +400,15 @@ hr {
   height: 100%;
   position: absolute;
   transform: translateZ(0);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .contact {
   min-height: auto;
   padding-bottom: 7rem;
   background: var(--secondary-bg-color);
+  z-index: 2;
 }
 
 .contact form {
@@ -475,6 +478,9 @@ hr {
 
 .contact form .btns {
   cursor: pointer;
+  background: var(--secondary-bg-color);
+  position: relative;
+  z-index: 3;
 }
 
 .footer {

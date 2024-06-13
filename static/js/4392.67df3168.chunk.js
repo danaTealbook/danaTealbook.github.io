@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4392],{4392:(n,e,s)=>{s.d(e,{LinksPlugin:()=>t});class t{constructor(){this.id="links"}async getPlugin(n){const{LinkInstance:e}=await s.e(3868).then(s.bind(s,3868));return new e(n)}loadOptions(){}needsPlugin(){return!0}}}}]);
